@@ -53,6 +53,6 @@
   * Save changes     
 
 6. Create a webhook. Go to the repository settings on GitHub. Click 'Webhooks' and 'Add Webhook'. Under 'Payload URL' add http://ip:8080/github-webhook/ where ip depends on the jenkins ip address. Change 'Content type' to 'application/json' and select 'Send me everything' for trigger events. Save.      
-![webhook](images/webhooks.png)        
+![webhook](images/webhhooks.png)        
 
 7. Execute a build, this can be done by making changes to the repository and pushing commits, or select 'Build Now'. It is advisable to check if the push method works first before resorting to the 'Build Now' button.
