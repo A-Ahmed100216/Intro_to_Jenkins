@@ -12,9 +12,9 @@
   * **Office 365 Connector**
     * Check the box marked 'restrict where this project can be run' and type sparta-ubuntu-node (N.B Begin typing and this should show in the drop down. It may require re-selecting to get rid of errors.)
     ![office](images/office_365_connector.png)
-  * **Source Code Management**
-    * Check the box marked 'Git'
-    ![source_code](images/source_code_management.png)
+  * **Source Code Management**    
+    * Check the box marked 'Git'      
+    ![source_code](images/source_code_management.png)     
     * In 'Repository URL' add the ssh key of the repository you wish to link. This can be accessed via clicking 'code' on the home page of the repository. Select ssh and copy the key. This will throw an error. Proceed to 'Credentials'
     * Click the 'Add' button beside 'Credentials'. This will enable you to create a new key.
     * Prior to doing so, generate a new ssh key in the terminal:
@@ -48,8 +48,11 @@
     npm install
     # Run tests
     npm test
-    ```
-  * Save changes
-  ![build](images/build.png)
-6. Create a webhook. Go to the repository settings on GitHub. Click 'Webhooks' and 'Add Webhook'. Under 'Payload URL' add http://ip:8080/github-webhook/ where ip depends on the jenkins ip address. Change 'Content type' to 'application/json' and select 'Send me everything' for trigger events. Save.
+    ```       
+    ![build](images/build.png)
+  * Save changes     
+
+6. Create a webhook. Go to the repository settings on GitHub. Click 'Webhooks' and 'Add Webhook'. Under 'Payload URL' add http://ip:8080/github-webhook/ where ip depends on the jenkins ip address. Change 'Content type' to 'application/json' and select 'Send me everything' for trigger events. Save.      
+![webhook](images/webhooks.png)        
+
 7. Execute a build, this can be done by making changes to the repository and pushing commits, or select 'Build Now'. It is advisable to check if the push method works first before resorting to the 'Build Now' button.
